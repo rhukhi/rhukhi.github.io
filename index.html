@@ -1,685 +1,554 @@
-<!doctype html>
-<html class="no-js" lang="en">
-
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Rukky Ujara</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="assets/styles/vendor/bootstrap.min.css">
-    <!-- Fonts -->
-    <link rel="stylesheet" href="assets/fonts/et-lineicons/css/style.css">
-    <link rel="stylesheet" href="assets/fonts/linea-font/css/linea-font.css">
-    <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.min.css">
-    <!-- Slider -->
-    <link rel="stylesheet" href="assets/styles/vendor/slick.css">
-    <!-- Lightbox -->
-    <link rel="stylesheet" href="assets/styles/vendor/magnific-popup.css">
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="assets/styles/vendor/animate.css">
-
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/styles/main.css">
-    <link rel="stylesheet" href="assets/styles/responsive.css">
-
-    <!-- JS -->
-    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oghenerukevwe (Rukky) Ujara | Tech Support & Data Analytics Specialist</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0284c7',
+              600: '#2563eb',
+              700: '#1d4ed8',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+<body class="bg-slate-100 text-slate-900 dark:bg-[#030712] dark:text-slate-100 font-sans antialiased transition-colors duration-300 relative selection:bg-sky-500 selection:text-white">
 
-<body id="page-top" data-spy="scroll" data-target=".navbar">
-    <!-- ========== Preloader ========== -->
+  <!-- BACKGROUND GLOW EFFECTS (RESTORED VIBRANCY) -->
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none z-0 overflow-hidden">
+    <div class="absolute top-[-5%] right-[-10%] w-[600px] h-[600px] bg-sky-400/20 dark:bg-sky-500/20 rounded-full blur-[140px]"></div>
+    <div class="absolute top-[35%] left-[-15%] w-[600px] h-[600px] bg-blue-600/15 dark:bg-blue-600/20 rounded-full blur-[140px]"></div>
+    <div class="absolute bottom-[-10%] right-[10%] w-[500px] h-[500px] bg-indigo-500/15 dark:bg-indigo-600/20 rounded-full blur-[140px]"></div>
+  </div>
 
-    <div class="preloader">
-        <img src="assets/images/loader.svg" alt="Loading...">
+  <!-- NAVIGATION -->
+  <header class="fixed top-0 left-0 w-full bg-white/80 dark:bg-[#030712]/80 backdrop-blur-xl z-50 border-b border-indigo-100/60 dark:border-slate-800/80 transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#" class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white hover:text-sky-500 transition-colors flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full bg-sky-500 inline-block shadow-[0_0_10px_#38bdf8]"></span> Rukky<span class="text-sky-400">.</span>
+      </a>
+      
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-700 dark:text-slate-300">
+        <a href="#about" class="hover:text-sky-400 transition-colors">About</a>
+        <a href="#focus" class="hover:text-sky-400 transition-colors">Focus Areas</a>
+        <a href="#experience" class="hover:text-sky-400 transition-colors">Experience</a>
+        <a href="#skills" class="hover:text-sky-400 transition-colors">Skills</a>
+        <a href="#contact" class="hover:text-sky-400 transition-colors">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        
+        <!-- POLISHED DUAL-ICON PILL TOGGLE -->
+        <button id="theme-toggle" aria-label="Toggle Light/Dark Theme" class="relative inline-flex items-center w-14 h-8 p-1 rounded-full bg-slate-200/80 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 transition-colors cursor-pointer shadow-inner">
+          <span class="sr-only">Toggle Theme</span>
+          
+          <!-- Sliding Background Thumb -->
+          <span id="theme-pill" class="absolute top-1 left-1 w-6 h-6 rounded-full bg-white dark:bg-slate-800 shadow-md transform transition-transform duration-300 border border-slate-200 dark:border-slate-700"></span>
+          
+          <!-- Sun & Moon Icons -->
+          <span class="relative z-10 flex items-center justify-between w-full px-1 pointer-events-none">
+            <i class="fa-solid fa-sun text-[11px] text-amber-500 w-4 text-center"></i>
+            <i class="fa-solid fa-moon text-[11px] text-sky-400 w-4 text-center"></i>
+          </span>
+        </button>
+
+        <a href="Oghenerukevwe_Ujara_Resume.pdf" download="Oghenerukevwe_Ujara_Resume.pdf" class="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-semibold rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 hover:border-sky-500 dark:hover:border-sky-400 transition-all shadow-sm hover:shadow-md">
+          <i class="fa-solid fa-file-arrow-down text-sky-500 dark:text-sky-400"></i> Resume
+        </a>
+        <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-xl bg-gradient-to-r from-sky-400 to-blue-600 hover:from-sky-300 hover:to-blue-500 text-white transition-all shadow-[0_0_20px_rgba(56,189,248,0.4)] hover:shadow-[0_0_25px_rgba(56,189,248,0.6)]">
+          Get in Touch
+        </a>
+      </div>
     </div>
+  </header>
 
+  <main class="relative z-10 pt-20">
 
-    <!-- ========== Navigation ========== -->
+    <!-- HERO SECTION -->
+    <section id="hero" class="min-h-[88vh] flex items-center justify-center px-6 py-12">
+      <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column -->
+        <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-sky-500/10 text-sky-700 dark:text-sky-400 border border-sky-500/20 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-sky-400 animate-ping"></span>
+            Open for Tech Support Roles & Data Analytics Internships
+          </span>
 
-    <nav class="navbar navbar-default navbar-fixed-top mega navbar-trans navbar-fw" role="navigation">
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <!-- Logo -->
-            <a class="navbar-brand" href="index.html"><img class="navbar-logo" src="assets/images/logo.png" width="100px" height="30px" alt="Custom - Logo"></a>
-        </div>
-
-        <!-- Navbar Links -->
-        <div id="navbar" class="navbar-collapse collapse page-scroll navbar-right">
-            <ul class="nav navbar-nav">
-                <li><a href="#home">Home<span class="sr-only"></span></a></li>
-                <li><a href="#services">Services<span class="sr-only"></span></a></li>
-                <li><a href="#about">About<span class="sr-only"></span></a></li>
-                <li><a href="#portfolio">Portfolio<span class="sr-only"></span></a></li>
-                <li><a href="#testimonials">Testimonials<span class="sr-only"></span></a></li>
-                <li><a href="#contact">Contact<span class="sr-only"></span></a></li>
-            </ul>
-            <!-- / .nav .navbar-nav -->
-        </div>
-        <!--/.navbar-collapse -->
-    </nav>
-    <!-- / .navbar -->
-
-
-
-    <!-- ========== Hero Cover ========== -->
-
-    <div id="home" class="freelancer-hero">
-        <div class="bg-overlay">
-
-            <!-- Hero Content -->
-            <div class="hero-content-wrapper">
-                <div class="hero-content">
-
-                    <h4 class="h-alt hero-subheading wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s">Freelance Web Designer</h4>
-                    <h1 class="hero-lead wow fadeInUp" data-wow-duration="1.5s">Rukky Ujara</h1>
-                    <a href="#contact" class="btn btn-light btn-small wow fadeIn" data-wow-duration="2s" data-wow-delay="1s">Get A Free Quote</a>
-
-                </div>
+          <div>
+            <h1 class="text-4xl sm:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.15]">
+              Hi, I'm <br class="hidden sm:inline"/>
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-blue-400 to-indigo-400">
+                Oghenerukevwe Ujara
+              </span>
+            </h1>
+            
+            <div class="mt-3 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-300 text-xs sm:text-sm shadow-sm">
+              <i class="fa-solid fa-volume-high text-sky-500 dark:text-sky-400"></i>
+              <span>You can call me <strong>Rukky</strong> <span class="text-slate-500 dark:text-slate-400">(pronounced <em>"Rookie"</em>)</span></span>
             </div>
+          </div>
 
-            <!-- Scroller -->
-            <a href="#services" class="scroller">
-                <span class="scroller-text">scroll down</span>
-                <span class="linea-basic-magic-mouse"></span>
+          <p class="text-base sm:text-lg text-slate-700 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium">
+            Technical Support & Operations Specialist with experience resolving complex API and front-end edge cases, maintaining high CSAT metrics, and leveraging SQL & Power BI for operational insights.
+          </p>
+
+          <!-- HERO BUTTONS WITH VIBRANT SHADOW GLOW -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#contact" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-sky-400 to-blue-600 hover:from-sky-300 hover:to-blue-500 text-white font-bold transition-all shadow-[0_0_25px_rgba(56,189,248,0.45)] hover:shadow-[0_0_35px_rgba(56,189,248,0.7)] hover:-translate-y-0.5 text-center">
+              Connect With Me
             </a>
+            <a href="Oghenerukevwe_Ujara_Resume.pdf" download="Oghenerukevwe_Ujara_Resume.pdf" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white dark:bg-slate-900/90 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-slate-800 font-semibold transition-all inline-flex items-center justify-center gap-2 shadow-sm hover:shadow-md hover:-translate-y-0.5">
+              <i class="fa-solid fa-download text-sky-500 dark:text-sky-400"></i> Download Resume
+            </a>
+          </div>
 
+          <!-- Quick Metrics Bar -->
+          <div class="pt-6 grid grid-cols-3 gap-4 border-t border-slate-200 dark:border-slate-800/80 max-w-md mx-auto lg:mx-0 text-center lg:text-left">
+            <div>
+              <p class="text-2xl font-extrabold text-slate-900 dark:text-white">7+ Yrs</p>
+              <p class="text-xs text-slate-600 dark:text-slate-400 font-medium">Tech & Ops Exp.</p>
+            </div>
+            <div>
+              <p class="text-2xl font-extrabold text-sky-500 dark:text-sky-400">93%</p>
+              <p class="text-xs text-slate-600 dark:text-slate-400 font-medium">CSAT Average</p>
+            </div>
+            <div>
+              <p class="text-2xl font-extrabold text-slate-900 dark:text-white">B.Sc.</p>
+              <p class="text-xs text-slate-600 dark:text-slate-400 font-medium">MIS Degree</p>
+            </div>
+          </div>
         </div>
-        <!-- / .bg-overlay -->
-    </div>
-    <!-- / .main-hero-2 -->
 
-
-    <!-- ========== Services ========== -->
-
-    <div class="gray-bg">
-        <section id="services" class="container ft-cards">
-            <div class="row section">
-
-                <header class="sec-heading">
-                    <h2>I can help with your</h2>
-                    <span class="subheading">Web Design and Development, Graphics Design and Photo Editing</span>
-                </header>
-
-                <!-- Item 1 -->
-                <div class="col-lg-4 col-md-6 mb-sm-50">
-                    <div class="ft-item wow fadeInUp" data-wow-duration="1s">
-                        <span class="fa fa-code"></span>
-                        <h4>Web Design</h4>
-                        <p>I like to code or build from scratch and I also enjoy editing templates and making them responsive and modern looking..</p>
-                        <!-- <a href="#">Learn more <span class="linea-arrows-slim-right"></span></a> -->
-                    </div>
+        <!-- Right Column: Profile Photo Frame with Neon Outer Glow -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative group">
+            <!-- Vibrant Ambient Glow Layer -->
+            <div class="absolute -inset-1 bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 rounded-3xl blur-xl opacity-75 dark:opacity-90 group-hover:opacity-100 transition duration-500"></div>
+            
+            <div class="relative w-64 h-80 sm:w-72 sm:h-96 rounded-3xl overflow-hidden border-2 border-sky-400/60 dark:border-sky-400/80 bg-white dark:bg-slate-900 shadow-[0_0_35px_rgba(56,189,248,0.35)]">
+              <img src="Rukky Ujara.jpg" alt="Oghenerukevwe Rukky Ujara" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" onError="this.onerror=null;this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80';">
+              
+              <div class="absolute bottom-4 left-4 right-4 bg-white/95 dark:bg-[#090d16]/90 backdrop-blur-md p-3 rounded-2xl border border-sky-400/30 dark:border-slate-800 flex items-center gap-3 shadow-xl">
+                <div class="w-10 h-10 rounded-xl bg-sky-500/10 dark:bg-sky-400/20 border border-sky-400/40 flex items-center justify-center text-sky-500 dark:text-sky-400 shadow-sm">
+                  <i class="fa-solid fa-shield-halved"></i>
                 </div>
-
-                <!-- Item 2 -->
-                <div class="col-lg-4 col-md-6 mb-sm-50">
-                    <div class="ft-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                        <span class="fa fa-pencil-square-o"></span>
-                        <h4>Graphics Design</h4>
-                        <p>I like to make my designs come alive. Whatever it is you want to design, from logos to flyers to posters, whatever it is, I'm your plug.</p>
-                        <!-- <a href="#">Learn more <span class="linea-arrows-slim-right"></span></a> -->
-                    </div>
+                <div>
+                  <p class="text-xs font-bold text-slate-900 dark:text-white">Oghenerukevwe "Rukky" Ujara</p>
+                  <p class="text-[11px] text-slate-500 dark:text-slate-400">Lagos, Nigeria</p>
                 </div>
-
-                <!-- Item 3 -->
-                <div class="col-lg-4 col-md-6 mb-sm-50">
-                    <div class="ft-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
-                        <span class="fa fa-camera-retro"></span>
-                        <h4>Photo Editing</h4>
-                        <p>I have intermediate knowledge and practice of Photoshop, Illustrator and CorelDraw. I can edit all kinds of pictures.</p>
-                        <!-- <a href="#">Learn more <span class="linea-arrows-slim-right"></span></a> -->
-                    </div>
-                </div>
-
+              </div>
             </div>
-            <!-- / .row -->
-        </section>
-    </div>
-    <!-- / .gray-bg -->
-
-
-
-    <!-- ========== Feature - Steps Numbers ========== -->
-
-    <section class="container ft-steps-numbers">
-        <div class="row section">
-
-            <header class="sec-heading ws-s">
-                <h2>Work process</h2>
-                <span class="subheading">When building a Website</span>
-            </header>
-
-            <!-- Step 1 -->
-            <div class="col-lg-4 col-md-6 mb-sm-100 ft-item wow fadeIn" data-wow-duration="1s">
-                <span class="ft-nbr">01</span>
-                <h4>Design</h4>
-                <p>I always give a mockup of how my websites would look before I start development. This is for the client to know what exactly the site would look like.</p>
-            </div>
-
-            <!-- Step 2 -->
-            <div class="col-lg-4 col-md-6 mb-sm-100 ft-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s">
-                <span class="ft-nbr">02</span>
-                <h4>Develop</h4>
-                <p>This is the stage whereby I build the website according to the image I had shown to my client. </p>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="col-lg-4 col-md-6 ft-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".6s">
-                <span class="ft-nbr">03</span>
-                <h4>Deploy</h4>
-                <p>This is the stage whereby the website is fully developed and the client tests and make the corrections they would like to make.</p>
-            </div>
-
+          </div>
         </div>
-        <!-- / .row -->
 
-        <!-- CTA Button -->
-        <div class="row ws-m">
-            <div class="text-center">
-                <a href="assets/Ujara Oghenerukevwe's Resume1.pdf" class="btn">My Resume</a>
-            </div>
-        </div>
-        <!-- / .row -->
-
+      </div>
     </section>
-    <!-- / .container -->
 
-
-
-    <!-- ========== Cricle Counters - Parallax ========== -->
-
-    <div id="skillsCircles" class="circles-counters">
-        <div class="container">
-            <div id="counters" class="row count-wrapper">
-
-                <!-- Item 1 -->
-                <div class="col-sm-6 col-lg-3 circle-item wow zoomIn" data-wow-duration=".6s" data-wow-delay=".3s">
-                    <div class="chart" data-percent="75"><span class="circle-icon linea-basic-gear"></span></div>
-                    <span class="circle-text">Web Development</span>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="col-sm-6 col-lg-3 circle-item wow zoomIn" data-wow-duration=".6s">
-                    <div class="chart" data-percent="75"><span class="circle-icon linea-basic-display"></span></div>
-                    <span class="circle-text">Web Design</span>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="col-sm-6 col-lg-3 circle-item wow zoomIn" data-wow-duration=".6s">
-                    <div class="chart" data-percent="75"><span class="circle-icon linea-basic-photo"></span></div>
-                    <span class="circle-text">Photography</span>
-                </div>
-
-                <!-- Item 4 -->
-                <div class="col-sm-6 col-lg-3 circle-item wow zoomIn" data-wow-duration=".6s" data-wow-delay=".3s">
-                    <div class="chart" data-percent="75"><span class="circle-icon linea-basic-star"></span></div>
-                    <span class="circle-text">Graphics Design</span>
-                </div>
-
-            </div>
-            <!-- / .row -->
-        </div>
-        <!-- / .container -->
-    </div>
-    <!-- / .circles-counters -->
-
-
-
-    <!-- ========== About - Freelancer Layout ========== -->
-
-    <div class="gray-bg">
-        <section id="about" class="container freelancer-about">
-            <div class="row section">
-
-                <!-- Freelancer -->
-                <div class="col-lg-offset-2 col-lg-4 col-md-6 mb-sm-50 img-wrapper">
-                    <div class="t-item">
-
-                        <!-- Image -->
-                        <div class="t-image">
-                            <img src="assets/images/team-1.jpg" alt="Team Member" class="img-responsive">
-                        </div>
-
-                        <!-- Info -->
-                        <div class="t-info">
-                            <h4 class="t-name">Rukky Ujara</h4>
-                            <span class="t-role">Front-End Developer</span>
-                            <ul class="social-links">
-                                <li><a href="https://www.facebook.com/rukkyujara"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="https://twitter.com/Rhukhi_"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="https://www.linkedin.com/in/rhukhi/"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="https://github.com/rhukhi"><i class="fa fa-github"></i></a></li>
-                            </ul>
-                        </div>
-
-                    </div>
-                    <!-- / .t-item -->
-                </div>
-                <!-- / .col-md-4 -->
-
-                <div class="col-lg-4 freelancer-about-content">
-                    <h2 class="t1-heading">About me</h2>
-                    <p>I am a female Front-End Developer with 1 year + experience. I am self taught and try to learn on each job I take. I am a design enthusiast. I am also a Wordpress developer. I am a basic user of Photoshop, Illustrator, Canva and Figma.
-                        This basically means I can design whatever it is you want me to design.</p>
-                    <p>I love Bootstrap, and Foundation frameworks. They make programming very easy. I am also building my experience level with Angular JS, Vue JS and the likes. So as to become a better front end developer. I also try as much as possible
-                        to build the most responsive site (web and mobile) I can.</p>
-                    <img src="assets/images/signature.png" alt="J.Webb">
-                </div>
-
-            </div>
-            <!-- / .row -->
-        </section>
-        <!-- / .container -->
-    </div>
-    <!-- / .gray-bg -->
-
-
-
-    <!-- ========== Number Counters - Parallax ========== -->
-
-    <div class="number-counters">
-        <div class="container">
-            <div id="counters" class="row count-wrapper">
-
-                <!-- Item 1 -->
-                <div class="col-md-3 mb-sm-100 count-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s">
-                    <span id="count-1" class="count-nbr">28</span>
-                    <span class="count-text">Projects completed</span>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="col-md-3 mb-sm-100 count-item wow fadeIn" data-wow-duration="1s">
-                    <span id="count-2" class="count-nbr">15</span>
-                    <span class="count-text">Websites Completed</span>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="col-md-3 mb-sm-100 count-item wow fadeIn" data-wow-duration="1s">
-                    <span id="count-3" class="count-nbr">13</span>
-                    <span class="count-text">Designs Completed</span>
-                </div>
-
-                <!-- Item 4 -->
-                <div class="col-md-3 count-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s">
-                    <span id="count-4" class="count-nbr">20</span>
-                    <span class="count-text">Happy clients</span>
-                </div>
-
-            </div>
-            <!-- / .row -->
-        </div>
-        <!-- / .container -->
-    </div>
-    <!-- / .number-counters -->
-
-
-
-    <!-- ========== Portfolio ========== -->
-
-    <section id="portfolio" class="container-fluid portfolio-layout portfolio-columns-fw">
-        <div class="row">
-            <header class="sec-heading">
-                <h2>Featured Projects</h2>
-                <span class="subheading">These are the jobs I've done so far.</span>
-            </header>
-        </div>
-        <!-- / .row -->
-
-        <!-- Filters -->
-        <div class="row">
-            <ul id="pfolio-filters" class="portfolio-filters">
-                <li class="active"><a href="#" data-filter="*">All</a></li>
-                <li><a href="#" data-filter=".webdesing">Webdesign</a></li>
-                <li><a href="#" data-filter=".design">Design</a></li>
-                <!-- <li><a href="#" data-filter=".photo">Photography</a></li> -->
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 px-6">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-8 tracking-tight">About Me</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <div class="md:col-span-2 space-y-4 text-slate-700 dark:text-slate-300 leading-relaxed">
+            <p>
+              I am a high-agency Technical Support & Operations Specialist with a background spanning IT infrastructure, front-end code troubleshooting (HTML/CSS/Liquid), Shopify integrations, and enterprise B2B support operations.
+            </p>
+            <p>
+              Throughout my career—most recently maintaining a 93% CSAT score resolving Tier 2 API technical escalations at GemCommerce and engineering workflows at TeKnowledge—I've specialized in simplifying complex technical edge cases and building clear documentation.
+            </p>
+            <p>
+              Driven by a deep passion for data-informed decision-making, I am actively transitioning into <strong>Data Analytics</strong>. To accelerate this evolution, I was recently awarded a prestigious Data Analytics Scholarship and am currently partaking in its intensive program—mastering tools such as SQL, Power BI, Advanced Excel, and Python to translate raw operational data into actionable strategic insights.
+            </p>
+          </div>
+          <div class="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 space-y-4 shadow-lg">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Core Highlights</h3>
+            <ul class="space-y-3 text-sm text-slate-700 dark:text-slate-300 font-medium">
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-graduation-cap text-sky-500 dark:text-sky-400 w-4"></i>
+                <span>Data Analytics Scholar</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-laptop-code text-sky-500 dark:text-sky-400 w-4"></i>
+                <span>Tier 1 / Tier 2 Support Lead</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-chart-line text-sky-500 dark:text-sky-400 w-4"></i>
+                <span>Data Analytics & BI Focus</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-graduation-cap text-sky-500 dark:text-sky-400 w-4"></i>
+                <span>B.Sc. Covenant University</span>
+              </li>
             </ul>
+          </div>
         </div>
-
-        <div class="row">
-            <div id="pfolio">
-
-                <!-- Item 1 -->
-                <div class="col-md-4 portfolio-item hover-bottom webdesing design">
-                    <figure>
-                        <img src="assets/images/brand-1.png" alt="Project Example">
-                        <figcaption>
-                            <h4 class="hover-heading">Kingdom Culture</h4>
-                            <ul class="hover-btns">
-                                <li><a class="open-gallery" href="assets/images/brand-1.png"><i class="fa fa-arrows-alt"></i></a></li>
-                                <li><a href="#"><i class="fa fa-share"></i></a></li>
-                            </ul>
-                        </figcaption>
-                    </figure>
-                </div>
-                <!-- / .portfolio-item -->
-
-                <!-- Item 2 -->
-                <div class="col-md-4 portfolio-item hover-bottom webdesing design">
-                    <figure>
-                        <img src="assets/images/brand-2.png" alt="Project Example">
-                        <figcaption>
-                            <h4 class="hover-heading">Dr Sally's Concept</h4>
-                            <ul class="hover-btns">
-                                <li><a class="open-gallery" href="assets/images/brand-2.png"><i class="fa fa-arrows-alt"></i></a></li>
-                                <li><a href="#"><i class="fa fa-share"></i></a></li>
-                            </ul>
-                        </figcaption>
-                    </figure>
-                </div>
-                <!-- / .portfolio-item -->
-
-                <!-- Item 3 -->
-                <div class="col-md-4 portfolio-item hover-bottom photo">
-                    <figure>
-                        <img src="assets/images/project-1.3.jpg" alt="Project Example">
-                        <figcaption>
-                            <h4 class="hover-heading">Get Dev</h4>
-                            <ul class="hover-btns">
-                                <li><a class="open-gallery" href="assets/images/project-1.3.jpg"><i class="fa fa-arrows-alt"></i></a></li>
-                                <li>
-                                    <a href="GetDev/index.html"><i class="fa fa-share"></i></a>
-                                    </a>
-                                </li>
-                            </ul>
-                        </figcaption>
-                    </figure>
-                </div>
-                <!-- / .portfolio-item -->
-
-                <!-- Item 4 -->
-                <div class="col-md-4 portfolio-item hover-bottom design">
-                    <figure>
-                        <img src="assets/images/brand-3.png" alt="Project Example">
-                        <figcaption>
-                            <h4 class="hover-heading">Anytime Buys</h4>
-                            <ul class="hover-btns">
-                                <li><a class="open-gallery" href="assets/images/brand-3.png"><i class="fa fa-arrows-alt"></i></a></li>
-                                <li><a href="https://wa.me/2348068031944?text=I%20got%20your%20number%20from%20Rukky%20My%20Name%20is%20:"><i class="fa fa-share"></i></a></li>
-                            </ul>
-                        </figcaption>
-                    </figure>
-                </div>
-                <!-- / .portfolio-item -->
-
-                <!-- Item 5 -->
-                <!-- <div class="col-md-4 portfolio-item hover-bottom design photo">
-                    <figure>
-                        <img src="assets/images/project-1.10.jpg" alt="Project Example">
-                        <figcaption>
-                            <h4 class="hover-heading">Project Name</h4>
-                            <ul class="hover-btns">
-                                <li><a class="open-gallery" href="assets/images/project-1.10.jpg"><i class="fa fa-arrows-alt"></i></a></li>
-                                <li><a href="pages/portfolio/portfolio-single-1.html"><i class="fa fa-share"></i></a></li>
-                            </ul>
-                        </figcaption>
-                    </figure>
-                </div> -->
-                <!-- / .portfolio-item -->
-
-                <!-- Item 6 -->
-                <!-- <div class="col-md-4 portfolio-item hover-bottom webdesing">
-                    <figure>
-                        <img src="assets/images/project-1.6.jpg" alt="Project Example">
-                        <figcaption>
-                            <h4 class="hover-heading">Project Name</h4>
-                            <ul class="hover-btns">
-                                <li><a class="open-gallery" href="assets/images/project-1.6.jpg"><i class="fa fa-arrows-alt"></i></a></li>
-                                <li><a href="pages/portfolio/portfolio-single-1.html"><i class="fa fa-share"></i></a></li>
-                            </ul>
-                        </figcaption>
-                    </figure>
-                </div> -->
-                <!-- / .portfolio-item -->
-
-            </div>
-            <!-- / #pfolio -->
-        </div>
-        <!-- / .row -->
+      </div>
     </section>
-    <!-- / .portfolio-columns-fw -->
 
-
-
-    <!-- ========== CTA - Contact Link ========== -->
-
-    <div class="cta-link">
-        <div class="bg-overlay">
-
-            <div class="cta-wrapper">
-                <h3 class="h-alt wow fadeIn" data-wow-delay=".1s" data-wow-duration="1s">See what we can do for you</h3>
-                <a href="#contact" class="btn btn-light btn-large wow fadeIn" data-wow-delay=".3s" data-wow-duration="1s">Get in touch</a>
-            </div>
-
+    <!-- CORE TARGET AREAS -->
+    <section id="focus" class="py-20 px-6 bg-slate-200/50 dark:bg-slate-950/80">
+      <div class="max-w-6xl mx-auto">
+        <div class="mb-12 text-center">
+          <h2 class="text-3xl font-bold text-slate-900 dark:text-white tracking-tight mb-2">Core Target Areas</h2>
+          <p class="text-slate-600 dark:text-slate-400">Combining technical operational support with quantitative analytical skills.</p>
         </div>
-    </div>
-    <!-- / .dark-bg .cta-link -->
 
-
-
-    <!-- ========== Testimonials ========== -->
-
-    <div id="testimonials" class="testimonials-parallax">
-        <div class="bg-overlay">
-
-            <div class="t-wrapper t-slider">
-
-                <!-- Testimonial 1 -->
-                <blockquote>
-                    Rukky is someone that would give her all just to make sure you get the best out of your partnership with her.
-                    <span class="et-quote t-type"></span>
-                    <footer>
-                        <cite>
-                    <h5 class="h-alt">Sally</h5>
-                    <h5>CEO - Sally's Royal/Dr Sally's Concept</h5>
-                  </cite>
-                    </footer>
-                </blockquote>
-
-                <!-- Testimonial 2 -->
-                <blockquote>
-                    She definitely delivers on time. Never has unfinished business. She always tries to finish each job at the expected time given to her.
-                    <span class="et-quote t-type"></span>
-                    <footer>
-                        <cite>
-                    <h5 class="h-alt">Mide</h5>
-                    <h5>CEO - Kingdom Culture</h5>
-                  </cite>
-                    </footer>
-                </blockquote>
-
-                <!-- Testimonial 3 -->
-                <!-- <blockquote>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-                    <span class="et-quote t-type"></span>
-                    <footer>
-                        <cite>
-                    <h5 class="h-alt">Patrick</h5>
-                    <h5></h5>
-                  </cite>
-                    </footer>
-                </blockquote> -->
-
-            </div>
-            <!-- / .t-wrapper -->
-
-            <!-- Client Slider -->
-            <ul class="t-clients clients-slider">
-                <li>
-                    <a href="http://ecclesiakingdom.org/"><img src="assets/images/brand-1.png" width="125" height="100" alt="Client"></a>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- CARD 1: CUSTOMER SUPPORT & TECH OPS -->
+          <div class="bg-white dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800/80 rounded-2xl p-8 flex flex-col justify-between shadow-md hover:shadow-xl transition-all hover:-translate-y-1">
+            <div>
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-500 dark:text-sky-400 text-xl shadow-sm">
+                  <i class="fa-solid fa-headset"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-slate-900 dark:text-white">Customer Support & Tech Operations</h3>
+                  <p class="text-xs text-sky-500 dark:text-sky-400 font-semibold">Tier 1 & Tier 2 Specialist</p>
+                </div>
+              </div>
+              <ul class="space-y-3 text-sm text-slate-700 dark:text-slate-300 mb-6">
+                <li class="flex items-start gap-2">
+                  <i class="fa-solid fa-check text-sky-500 dark:text-sky-400 mt-1"></i>
+                  <span><strong>Technical Escalations:</strong> API edge cases, front-end Liquid code, theme conflicts, and platform troubleshooting.</span>
                 </li>
-                <li>
-                    <a href="https://sallysroyal.com/"><img src="assets/images/brand-2.png" width="125" height="100" alt="Client"></a>
+                <li class="flex items-start gap-2">
+                  <i class="fa-solid fa-check text-sky-500 dark:text-sky-400 mt-1"></i>
+                  <span><strong>Queue & SLA Management:</strong> Consistently achieving CSAT scores up to 93% while managing high-volume client tickets via Intercom.</span>
                 </li>
-                <li>
-                    <a href="http://ecclesiakingdom.org/"><img src="assets/images/brand-1.png" width="125" height="100" alt="Client"></a>
-                </li>
-                <li>
-                    <a href="https://sallysroyal.com/"><img src="assets/images/brand-2.png" width="125" height="100" alt="Client"></a>
-                </li>
-                <li>
-                    <a href="http://ecclesiakingdom.org/"><img src="assets/images/brand-1.png" width="125" height="100" alt="Client"></a>
-                </li>
-                <li>
-                    <a href="https://sallysroyal.com/"><img src="assets/images/brand-2.png" width="125" height="100" alt="Client"></a>
-                </li>
-            </ul>
-            <!-- / .t-clients -->
-
-        </div>
-        <!-- / .bg-overlay -->
-    </div>
-    <!-- / .testimonials-parallax -->
-
-
-    <!-- ========== CTA - Newsletter Signup ========== -->
-
-    <!-- <div class="cta-newsletter">
-        <div class="bg-overlay">
-            <div class="cta-wrapper">
-
-                <h3 class="cta-lead h-alt wow fadeIn" data-wow-delay=".1s" data-wow-duration="1s">Join our newsletter</h3>
-
-                <form class="mc-ajax mc-form subscribe-form" _lpchecked="1"> -->
-
-    <!-- Email -->
-    <!-- <input type="email" name="EMAIL" placeholder="Your email address" id="mc-email" class="wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s"> -->
-
-    <!-- Send Button -->
-    <!-- <input type="submit" name="subscribe" value="Join Us" class="btn btn-light btn-large wow fadeInUp mc-send-btn" data-wow-delay=".1s" data-wow-duration="1s"> -->
-
-    <!-- Info (uncomment this for extra info) -->
-    <!-- <label for="mc-email" class="mc-info"></label> -->
-
-    <!-- Ajax message -->
-    <!-- <div class="subscribe-result"></div>
-
-                </form>
-
-            </div> -->
-    <!-- / .cta-wrapper -->
-    </div>
-    <!-- / .bg-overlay -->
-    </div>
-    <!-- / .cta-newsletter -->
-
-
-
-    <!-- ========== Footer Litle ========== -->
-
-    <footer id="contact" class="footer-litle">
-        <div class="gray-bg">
-
-            <!-- Contact Info -->
-            <address>
-              <ul>
-                <!-- Address -->
-                <li>
-                  <span class="linea-basic-map adr-icon"></span>
-                  <div class="adr-group">
-                    <span class="adr-heading">Address</span>
-                    <span class="adr-info">Lagos, Nigeria</span>
-                  </div>
-                </li>
-
-                <!-- Email -->
-                <li>
-                  <span class="linea-basic-paperplane adr-icon"></span>
-                  <div class="adr-group">
-                    <span class="adr-heading">Email</span>
-                    <span class="adr-info">rukkyujara@gmail.com</span>
-                  </div>
-                </li>
-
-                <!-- Phone -->
-                <li>
-                  <span class="linea-basic-smartphone adr-icon"></span>
-                  <div class="adr-group">
-                    <span class="adr-heading">Phone</span>
-                    <span class="adr-info">+ 234 802 6398 829</span>
-                  </div>
+                <li class="flex items-start gap-2">
+                  <i class="fa-solid fa-check text-sky-500 dark:text-sky-400 mt-1"></i>
+                  <span><strong>Knowledge Base & SOPs:</strong> Authoring engineering-grade documentation that reduced new-hire onboarding time by 25%.</span>
                 </li>
               </ul>
-            </address>
-        </div>
-        <!-- / .gray-bg -->
-
-
-        <!-- Social Links -->
-        <div class="dark-bg">
-            <div class="container footer-social-links">
-                <div class="row">
-
-                    <ul>
-                        <li><a href="https://www.facebook.com/rukkyujara">Facebook</a></li>
-                        <li><a href="https://twitter.com/Rhukhi_">Twitter</a></li>
-                        <li><a href="https://www.linkedin.com/in/rhukhi/">LinkedIn</a></li>
-                        <li><a href="https://github.com/rhukhi">Github</a></li>
-                    </ul>
-
-                </div>
             </div>
-            <!-- / .container -->
-        </div>
-        <!-- / .dark-bg -->
-
-
-        <!-- Copyright -->
-        <div class="copyright">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-md-6">
-                        <small>&copy; 2020 Rhukhi's Concepts</small>
-                    </div>
-
-                    <div class="col-md-6">
-                        <small><a href="#page-top" class="pull-right to-the-top">To the top<i class="fa fa-angle-up"></i></a></small>
-                    </div>
-
-                </div>
-                <!-- / .row -->
+            <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-100 dark:border-slate-800/60">
+              <span class="text-xs px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium shadow-sm">Intercom / Help Desk</span>
+              <span class="text-xs px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium shadow-sm">Front-End Code</span>
+              <span class="text-xs px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium shadow-sm">Shopify Ecosystem</span>
+              <span class="text-xs px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium shadow-sm">Ticket Escalation</span>
+              <span class="text-xs px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium shadow-sm">CSAT & SLA</span>
             </div>
-            <!-- / .container -->
+          </div>
+
+          <!-- CARD 2: DATA ANALYTICS & BI -->
+          <div class="bg-white dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800/80 rounded-2xl p-8 flex flex-col justify-between shadow-md hover:shadow-xl transition-all hover:-translate-y-1">
+            <div>
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-500 dark:text-emerald-400 text-xl shadow-sm">
+                  <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-slate-900 dark:text-white">Data Analytics & BI Internships</h3>
+                  <p class="text-xs text-emerald-500 dark:text-emerald-400 font-semibold">Analytics & Process Intelligence</p>
+                </div>
+              </div>
+              <ul class="space-y-3 text-sm text-slate-700 dark:text-slate-300 mb-6">
+                <li class="flex items-start gap-2">
+                  <i class="fa-solid fa-check text-emerald-500 dark:text-emerald-400 mt-1"></i>
+                  <span><strong>Data Modeling & SQL:</strong> Querying and aggregating relational databases (PostgreSQL/SQL) for performance metrics.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fa-solid fa-check text-emerald-500 dark:text-emerald-400 mt-1"></i>
+                  <span><strong>Dashboarding & BI:</strong> Building dynamic Power BI reports to track KPIs, customer health trends, and operational bottlenecks.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fa-solid fa-check text-emerald-500 dark:text-emerald-400 mt-1"></i>
+                  <span><strong>Process Automation:</strong> Designing automated workflow logic with Power Automate to streamline reporting.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-100 dark:border-slate-800/60">
+              <span class="text-xs px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium shadow-sm">SQL / PostgreSQL</span>
+              <span class="text-xs px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium shadow-sm">Power BI / DAX</span>
+              <span class="text-xs px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium shadow-sm">Power Automate</span>
+              <span class="text-xs px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium shadow-sm">Excel Analytics</span>
+            </div>
+          </div>
+
         </div>
-        <!-- / .copyright -->
-    </footer>
-    <!-- / .footer-litle -->
+      </div>
+    </section>
 
+    <!-- UPCOMING PROJECTS PLACEHOLDER SECTION -->
+    <section id="projects" class="py-16 px-6">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 text-center relative overflow-hidden shadow-lg">
+          <span class="text-xs font-semibold px-3 py-1 rounded-full bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-500/20 mb-4 inline-block shadow-sm">
+            Projects Portfolio
+          </span>
+          <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Data Case Studies & Dashboards</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm max-w-xl mx-auto mb-6">
+            Currently updating my project showcase with interactive Power BI dashboards, SQL query repositories, and technical case studies from my Data Analytics scholarship. Stay tuned!
+          </p>
+          <a href="#contact" class="inline-flex items-center gap-2 text-sm font-semibold text-sky-500 dark:text-sky-400 hover:text-sky-400 transition-colors">
+            Ask me about my ongoing analytics projects <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
 
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <section id="experience" class="py-20 px-6">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-2 tracking-tight">Professional Experience</h2>
+        <p class="text-slate-600 dark:text-slate-400 mb-12">A timeline of technical support, operations leadership, and systems roles.</p>
 
-    <!-- ========== Scripts ========== -->
+        <div class="space-y-10 border-l-2 border-slate-300 dark:border-slate-800 pl-6 ml-2">
+          
+          <!-- GEMCOMMERCE -->
+          <div class="relative group">
+            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-100 dark:bg-[#030712] border-2 border-sky-500 group-hover:scale-125 transition-transform shadow-[0_0_10px_#38bdf8]"></div>
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white">Customer Success Associate</h3>
+              <span class="text-xs text-sky-500 dark:text-sky-400 font-semibold">Jul 2025 – Apr 2026</span>
+            </div>
+            <p class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-3">GemCommerce • Vietnam (Remote)</p>
+            <ul class="list-disc list-inside text-sm text-slate-700 dark:text-slate-300 space-y-1.5 leading-relaxed">
+              <li>Served as Tier 2 technical lead for global merchants, resolving API integration issues, Liquid code conflicts, and Shopify bugs via Intercom.</li>
+              <li>Consistently maintained a 93% CSAT score while managing high-volume B2B merchant relationships.</li>
+              <li>Authored technical documentation and mentored Tier 1 support teams to improve first-contact resolution (FCR).</li>
+            </ul>
+          </div>
 
-    <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
-    <script src="assets/js/vendor/google-fonts.js"></script>
-    <script src="assets/js/vendor/jquery.easing.js"></script>
-    <script src="assets/js/vendor/jquery.waypoints.min.js"></script>
-    <script src="assets/js/vendor/bootstrap.min.js"></script>
-    <script src="assets/js/vendor/bootstrap-hover-dropdown.min.js"></script>
-    <script src="assets/js/vendor/smoothscroll.js"></script>
-    <script src="assets/js/vendor/jquery.localScroll.min.js"></script>
-    <script src="assets/js/vendor/jquery.scrollTo.min.js"></script>
-    <script src="assets/js/vendor/jquery.stellar.min.js"></script>
-    <script src="assets/js/vendor/jquery.parallax.js"></script>
-    <script src="assets/js/vendor/slick.min.js"></script>
-    <script src="assets/js/vendor/jquery.easypiechart.min.js"></script>
-    <script src="assets/js/vendor/countup.min.js"></script>
-    <script src="assets/js/vendor/isotope.min.js"></script>
-    <script src="assets/js/vendor/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/vendor/wow.min.js"></script>
-    <script src="assets/js/vendor/jquery.ajaxchimp.js"></script>
+          <!-- DE9MICS CONSULTS -->
+          <div class="relative group">
+            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-100 dark:bg-[#030712] border-2 border-slate-400 dark:border-slate-600 group-hover:border-sky-500 group-hover:scale-125 transition-transform"></div>
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white">Training Operations Lead & Virtual Assistant</h3>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-semibold">Jan 2023 – Jun 2025</span>
+            </div>
+            <p class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-3">DE9MICS CONSULTS • Lagos, Nigeria</p>
+            <ul class="list-disc list-inside text-sm text-slate-700 dark:text-slate-300 space-y-1.5 leading-relaxed">
+              <li>Directed IT training program implementations, improving team technical proficiency by 30%.</li>
+              <li>Architected internal SOPs and comprehensive user guides that reduced new-hire onboarding time by 25%.</li>
+              <li>Streamlined administrative workflows and executive scheduling for global leadership.</li>
+            </ul>
+          </div>
 
-    <!-- Custom JS -->
-    <script src="assets/js/main.js"></script>
+          <!-- TEKNOWLEDGE -->
+          <div class="relative group">
+            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-100 dark:bg-[#030712] border-2 border-slate-400 dark:border-slate-600 group-hover:border-sky-500 group-hover:scale-125 transition-transform"></div>
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white">Technical Support Engineer - Power Platform</h3>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-semibold">Apr 2021 – Apr 2023</span>
+            </div>
+            <p class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-3">TeKnowledge • Lagos, Nigeria</p>
+            <ul class="list-disc list-inside text-sm text-slate-700 dark:text-slate-300 space-y-1.5 leading-relaxed">
+              <li>Engineered rule-based logic and automated data workflows using Power Automate for B2B enterprise clients.</li>
+              <li>Resolved 80+ complex technical tickets monthly, maintaining a 91% CSAT score through thorough root cause analysis.</li>
+              <li>Authored engineering-grade knowledge base articles documenting reproduction steps for technical implementations.</li>
+            </ul>
+          </div>
+
+          <!-- EPHRAIM CONCEPTS -->
+          <div class="relative group">
+            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-100 dark:bg-[#030712] border-2 border-slate-400 dark:border-slate-600 group-hover:border-sky-500 group-hover:scale-125 transition-transform"></div>
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white">IT Specialist</h3>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-semibold">Sep 2019 – Apr 2021</span>
+            </div>
+            <p class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-3">Ephraim Concepts Nigeria Limited • Lagos, Nigeria</p>
+            <ul class="list-disc list-inside text-sm text-slate-700 dark:text-slate-300 space-y-1.5 leading-relaxed">
+              <li>Managed a technical project team of 4 to deliver requirements for institutional clients.</li>
+              <li>Resolved critical system malfunctions, ensuring zero downtime for essential operations.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS & CERTIFICATIONS -->
+    <section id="skills" class="py-20 px-6 bg-slate-200/50 dark:bg-slate-950/80">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-2 tracking-tight">Skills & Certifications</h2>
+        <p class="text-slate-600 dark:text-slate-400 mb-10">Technical toolkit and recognized credentials.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <!-- SKILLS LIST -->
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-wider text-sky-500 dark:text-sky-400 mb-3">Data & Analytics Toolkit</h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold shadow-sm">SQL / PostgreSQL</span>
+                <span class="px-3 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold shadow-sm">Power BI / DAX</span>
+                <span class="px-3 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold shadow-sm">Advanced Excel</span>
+                <span class="px-3 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold shadow-sm">Power Automate</span>
+                <span class="px-3 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold shadow-sm">Python & R</span>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-wider text-sky-500 dark:text-sky-400 mb-3">Support & Web Technologies</h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold shadow-sm">Intercom</span>
+                <span class="px-3 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold shadow-sm">HTML / CSS</span>
+                <span class="px-3 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold shadow-sm">Liquid Code & Shopify</span>
+                <span class="px-3 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold shadow-sm">Jira Project Mgmt</span>
+                <span class="px-3 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold shadow-sm">API Troubleshooting</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CERTIFICATIONS -->
+          <div class="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-md">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-sky-500 dark:text-sky-400 mb-4">Certifications & Training</h3>
+            <ul class="space-y-3 text-sm text-slate-700 dark:text-slate-300 font-medium">
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-award text-sky-500 dark:text-sky-400"></i>
+                <span>Data Analytics Scholarship Recipient</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-certificate text-sky-500 dark:text-sky-400"></i>
+                <span>Deloitte Australia - Data Analytics Simulation</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-certificate text-sky-500 dark:text-sky-400"></i>
+                <span>Jira Project Management Certification</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-certificate text-sky-500 dark:text-sky-400"></i>
+                <span>Power Automate Fundamentals</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-certificate text-sky-500 dark:text-sky-400"></i>
+                <span>Power Apps Curriculum</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 flex items-center justify-between shadow-md">
+          <div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">B.Sc. Management Information Systems</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400">Covenant University</p>
+          </div>
+          <i class="fa-solid fa-graduation-cap text-3xl text-slate-300 dark:text-slate-700"></i>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 px-6">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Let's Connect</h2>
+          <p class="text-slate-600 dark:text-slate-400 max-w-lg mx-auto">
+            I'm currently available for Customer Support / Technical Support roles and Data Analytics internships.
+          </p>
+        </div>
+
+        <!-- Formspree Contact Form -->
+        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-8 space-y-6 mb-12 shadow-xl">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="name" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">Your Name</label>
+              <input type="text" id="name" name="name" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-sky-500 dark:focus:border-sky-400 focus:ring-1 focus:ring-sky-400 transition-colors text-sm shadow-inner">
+            </div>
+            <div>
+              <label for="email" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">Email Address</label>
+              <input type="email" id="email" name="email" required placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-sky-500 dark:focus:border-sky-400 focus:ring-1 focus:ring-sky-400 transition-colors text-sm shadow-inner">
+            </div>
+          </div>
+
+          <div>
+            <label for="subject" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">Subject</label>
+            <input type="text" id="subject" name="subject" required placeholder="Role Opportunity / Data Analytics Internship" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-sky-500 dark:focus:border-sky-400 focus:ring-1 focus:ring-sky-400 transition-colors text-sm shadow-inner">
+          </div>
+
+          <div>
+            <label for="message" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">Message</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Hi Rukky, I'd like to discuss an opportunity..." class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-sky-500 dark:focus:border-sky-400 focus:ring-1 focus:ring-sky-400 transition-colors text-sm resize-none shadow-inner"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-sky-400 to-blue-600 hover:from-sky-300 hover:to-blue-500 text-white font-bold transition-all shadow-[0_0_20px_rgba(56,189,248,0.4)] hover:shadow-[0_0_30px_rgba(56,189,248,0.65)] hover:-translate-y-0.5 flex items-center justify-center gap-2 text-sm">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+
+        <!-- Social & Direct Contact Links -->
+        <div class="flex flex-wrap justify-center gap-4 pt-4">
+          <a href="https://www.linkedin.com/in/rukkyujara" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 transition-all text-sm font-semibold shadow-md hover:shadow-lg hover:-translate-y-0.5">
+            <i class="fa-brands fa-linkedin text-lg text-sky-500 dark:text-sky-400"></i> LinkedIn
+          </a>
+          <a href="https://github.com/rhukhi" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 transition-all text-sm font-semibold shadow-md hover:shadow-lg hover:-translate-y-0.5">
+            <i class="fa-brands fa-github text-lg"></i> GitHub
+          </a>
+          <a href="mailto:rukkyujara@gmail.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 transition-all text-sm font-semibold shadow-md hover:shadow-lg hover:-translate-y-0.5">
+            <i class="fa-solid fa-envelope text-lg text-sky-500 dark:text-sky-400"></i> rukkyujara@gmail.com
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-8 border-t border-slate-200 dark:border-slate-900 text-center text-xs text-slate-500 relative z-10">
+    <div class="max-w-6xl mx-auto px-6">
+      <p>© <script>document.write(new Date().getFullYear())</script> Rukky Ujara. Hosted on GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT FOR LIGHT / DARK MODE TOGGLE -->
+  <script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themePill = document.getElementById('theme-pill');
+
+    function updatePillPosition() {
+      if (document.documentElement.classList.contains('dark')) {
+        themePill.style.transform = 'translateX(24px)';
+      } else {
+        themePill.style.transform = 'translateX(0px)';
+      }
+    }
+
+    // Default to DARK MODE unless user explicitly saved 'light' previously
+    const savedTheme = localStorage.getItem('color-theme');
+    if (savedTheme === 'light') {
+      document.documentElement.classList.remove('dark');
+    } else {
+      document.documentElement.classList.add('dark');
+    }
+    updatePillPosition();
+
+    themeToggleBtn.addEventListener('click', function() {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+      }
+      updatePillPosition();
+    });
+  </script>
+
 </body>
-
 </html>
