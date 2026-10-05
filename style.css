@@ -54,3 +54,5 @@ section h2{font-size:clamp(1.7rem,4vw,2.3rem);margin-bottom:.6rem;letter-spacing
 #contact{border-bottom:0}
 footer{padding:1.5rem 0 2.5rem;color:var(--muted);font-size:.9rem}
 @media (max-width:700px){.hero .wrap{grid-template-columns:1fr}.photo{max-width:11rem;order:-1}.job{grid-template-columns:1fr;gap:.4rem}}
+
+.certs{list-style:none;margin:0;padding:0}.certs li{margin-bottom:.6rem}.certs span{display:block;color:var(--muted);font-size:.9rem}
