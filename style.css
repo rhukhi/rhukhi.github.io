@@ -1,0 +1,56 @@
+:root{--bg:#f2f6f8;--surface:#fff;--ink:#14202b;--muted:#4d5d6b;--line:#d3dde4;--accent:#0f766e;--accent-ink:#fff;--mark:#f6c453}
+@media (prefers-color-scheme:dark){:root{--bg:#0e161d;--surface:#16212b;--ink:#eaf1f5;--muted:#a3b3bf;--line:#2a3945;--accent:#4fd1c0;--accent-ink:#0e161d;--mark:#7a5c10}}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 "Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.25rem}
+.topbar{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;gap:1.25rem;align-items:center;min-height:3.25rem;overflow-x:auto}
+.topbar b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.2rem;margin-right:auto}
+.topbar a{text-decoration:none;font-size:.95rem;color:var(--muted);white-space:nowrap}
+.topbar a:hover{color:var(--ink)}
+.hero{padding:3.5rem 0 3rem;border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:1fr 14rem;gap:2.5rem;align-items:center}
+.hero h1{font-size:clamp(2.4rem,7vw,4.6rem);font-weight:800;letter-spacing:-.03em}
+.hero .nick{color:var(--muted);margin:.5rem 0 0}
+.role{font-family:"Bricolage Grotesque",sans-serif;font-size:1.3rem;font-weight:500;margin:1.1rem 0;display:inline;background:linear-gradient(transparent 62%,var(--mark) 62%)}
+.hero p.lede{max-width:38rem;color:var(--muted);margin:1.1rem 0 1.5rem}
+.photo{width:100%;aspect-ratio:1;object-fit:cover;border-radius:1rem;border:1px solid var(--line);background:var(--surface)}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:.5rem;font-weight:600;text-decoration:none;border:2px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn:hover{filter:brightness(1.08)}
+.status{margin-top:1.25rem;color:var(--muted);font-size:.95rem}
+section{padding:3.25rem 0;border-bottom:1px solid var(--line)}
+section h2{font-size:clamp(1.7rem,4vw,2.3rem);margin-bottom:.6rem;letter-spacing:-.02em}
+.sub{color:var(--muted);max-width:40rem;margin:0 0 1.75rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:1rem;margin:2rem 0 0;padding:0;list-style:none}
+.stats li{border-left:4px solid var(--accent);padding:.2rem 0 .2rem 1rem}
+.stats b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.9rem;line-height:1.1}
+.stats span{color:var(--muted);font-size:.92rem}
+.about p{max-width:44rem;margin:0 0 1rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1.25rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:.75rem;padding:1.25rem;display:flex;flex-direction:column;gap:.75rem}
+.card h3{font-size:1.2rem}
+.card p{margin:0;color:var(--muted);font-size:.98rem;flex:1}
+.card a.link{font-weight:600;color:var(--accent);text-decoration:none}
+.card a.link:hover{text-decoration:underline}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:0;padding:0;list-style:none}
+.tags li{border:1px solid var(--line);border-radius:999px;padding:.15rem .7rem;font-size:.85rem;background:var(--bg)}
+.job{display:grid;grid-template-columns:12rem 1fr;gap:1.5rem;padding:1.5rem 0;border-top:1px solid var(--line)}
+.job:first-of-type{border-top:0;padding-top:0}
+.when{color:var(--muted);font-size:.95rem}
+.when strong{display:block;color:var(--ink);font-size:1.05rem}
+.job h3{font-size:1.3rem;margin-bottom:.6rem}
+.job ul{margin:0;padding-left:1.1rem}
+.job li{margin-bottom:.5rem;max-width:44rem}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:2rem}
+.grid2 h3{font-size:1.1rem;margin-bottom:.6rem}
+.grid2 ul.plain{list-style:none;margin:0;padding:0}
+.grid2 ul.plain li{margin-bottom:.5rem}
+#contact{border-bottom:0}
+footer{padding:1.5rem 0 2.5rem;color:var(--muted);font-size:.9rem}
+@media (max-width:700px){.hero .wrap{grid-template-columns:1fr}.photo{max-width:11rem;order:-1}.job{grid-template-columns:1fr;gap:.4rem}}
