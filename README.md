@@ -1,28 +1,36 @@
-# Hi, I'm Rukky 👋
+# Rukky Ujara | Portfolio
 
-Customer support and technical operations specialist in Lagos, Nigeria, with seven years across IT support, customer success and operations. I'm now building data analytics skills in **SQL, Power BI and Excel**.
+Personal portfolio of **Oghenerukevwe (Rukky) Ujara**, a customer support and technical operations specialist moving into data analytics.
 
-**Open to:** customer support roles and data analytics internships.
+**Live site:** https://rhukhi.github.io
 
-## Data projects
+## What's on the site
 
-| Project | What it covers | Tools |
-| ------- | -------------- | ----- |
-| [Nigeria 2026 Budget Analysis](https://github.com/rhukhi/datastorm-nigeria-2026-budget-analysis) | Group project: dashboard on debt service, sector allocations and revenue credibility | Power BI |
-| [Northwind and Palladium Bank](https://github.com/rhukhi/hng-data-project-northwind-and-palladium-bank) | Sales dashboard and a star schema design | Power BI, PostgreSQL |
-| [TradeZone E-commerce Analysis](https://github.com/rhukhi/tradezone-ecommerce-sql-analysis) | Data cleaning, 8 business queries and a management memo | PostgreSQL |
-| [Catalogue Cleaning](https://github.com/rhukhi/ecommerce-catalogue-cleaning-excel) | 3,847-row product catalogue: deduplication, encoding fixes, SEO titles | Excel |
-| [Video Games Sales Analysis](https://github.com/rhukhi/Video-Games-Sales-Analysis---Excel) | Sales by genre, publisher, region and critic score | Excel |
+- **Data analytics projects** in SQL (PostgreSQL), Power BI and Excel, each linked to its own repository
+- **Work experience** from 2015 to 2026 across customer support, customer success, IT service, training operations and data
+- **Skills and certificates**, with issuers and dates
+- **Contact links** for email, LinkedIn and GitHub
 
-## Background
+## Built with
 
-- Customer Success Associate at GemCommerce: 180+ tickets a month at a 93% CSAT
-- Training Operations Lead at De9mics Consults: 6 IT training programs for 15+ people
-- Technical Support Engineer (Power Platform) at TeKnowledge: Power Automate workflows that cut approval time by 40%
-- Data Analyst Intern at HNG Tech
+Plain HTML and CSS, with no frameworks or build step. It is hosted free on GitHub Pages and works on phones and desktops, in light and dark mode.
 
-## Find me
+## Files
 
-- Portfolio: https://rhukhi.github.io
-- LinkedIn: https://www.linkedin.com/in/rhukhi/
+| File | Purpose |
+| ---- | ------- |
+| `index.html` | The whole one-page site |
+| `style.css` | Colors, layout and dark mode |
+| `Rukky Ujara.jpg` | Profile photo |
+| `Oghenerukevwe_Ujara_Resume.pdf` | Downloadable resume |
+
+## Run it locally
+
+1. Download or clone this repository.
+2. Open `index.html` in a browser.
+
+## Contact
+
 - Email: rukkyujara@gmail.com
+- LinkedIn: https://www.linkedin.com/in/rhukhi/
+- GitHub: https://github.com/rhukhi
